@@ -27,8 +27,10 @@ if (echo "$list_name" | grep -xq "\-.*"); then
   echo "Must pass an option to an -L key"
   exit 1
 fi
+
 [ ! -n "$entry_name" ] && exit 2
 [ ! -n "$list_name" ] && exit 2
 [ ! -f "$lists_dir/$list_name" ] && touch "$lists_dir/$list_name"
-echo "$lists_dir/$list_name"
+
+echo "Appending to : $lists_dir/$list_name"
 echo "$entry_name" >> $lists_dir/$list_name
