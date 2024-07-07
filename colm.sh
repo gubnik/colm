@@ -22,6 +22,7 @@ while getopts 'C:L:a:' key; do
     ;;
   esac
 done
+
 if (echo "$list_name" | grep -xq "\-.*"); then
   echo "Must pass an option to an -L key"
   exit 1
