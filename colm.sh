@@ -11,7 +11,6 @@ fi
 
 lists_dir=`grep "lists_dir" $config_file | awk '{print $2}'`
 list_name="$user-list"
-entry_name=""
 
 while getopts 'C:L:a:' key; do
   case "$key" in
