@@ -7,9 +7,7 @@ config_file=/home/$user/$config_dir/config
 if [[ ! -d /home/$user/$config_dir ]]; then
   mkdir /home/$user/$config_dir
   echo "Configuration file went missing. Generated an empty one."
-  echo "lists_dir /home/$user/.colmlists" >> $config_file
 fi
-echo "$config_file"
 
 lists_dir=`grep "lists_dir" $config_file | awk '{print $2}'`
 list_name="$user-list"
